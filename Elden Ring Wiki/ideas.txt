@@ -1,0 +1,4 @@
+Ideas for the mobile app project.
+
+1. Hotel app where the person would be able to contatct teh staff ask for services check daily activities, make a booking about the apartmetnss,rental services  and a tips page where the person would get suggested places to visit.
+2. Event manager page where one can book differebt tickets to concerts and have a location available.

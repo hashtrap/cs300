@@ -15,6 +15,27 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".new_weapon"
+            android:exported="false" />
+        <activity
+            android:name=".Single_weapon"
+            android:exported="false" />
+        <activity
+            android:name=".New_Boss"
+            android:exported="false" />
+        <activity
+            android:name=".Single_Boss"
+            android:exported="false" />
+        <activity
+            android:name=".Weapon_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_chooser"
+            android:exported="false" />
+        <activity
+            android:name=".Boss_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Single_Menu"
             android:exported="false" />
         <activity

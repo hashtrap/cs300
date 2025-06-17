@@ -5,19 +5,19 @@
         {
             "Name":"Godrick The Grafted",
             "Location":"Stormveil Castle",
-            "Weak_to":["standard","slash","strike","pierce"],
-            "Strong_to":["holy"],
-            "Items_dropped":["Godrick's Great Rune","20'000 runes","rememberence of the Grafted"],
+            "Weak_to":"standard,slash,strike,pierce",
+            "Strong_to":"holy",
+            "Items_dropped":"Godrick's Great Rune,20'000 runes,rememberence of the Grafted",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/godrick_the_grafted_bosses_elden_ring_wiki_600px1-min.jpg"
         },
 
         "The Full Moon":
         {
-            "name":"Rennala Queen of the Full Moon",
+            "Name":"Rennala Queen of the Full Moon",
             "Location":"Raya Lucaria Academy",
-            "Weak_to":["standard","slash","pierce"],
-            "Strong_to":["magic","all status affects"],
-            "Items_dropped":["rememberence of the Full Moon Queen","40'000 runes","Great Rune of the Unborn"],
+            "Weak_to":"standard,slash,pierce",
+            "Strong_to":"magic,all status affects",
+            "Items_dropped":"rememberence of the Full Moon Queen,40'000 runes,Great Rune of the Unborn",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/rennala_queen_of_the_full_moon_bosses_elden_ring_wiki_600px1-min.jpg"
         },
 
@@ -25,9 +25,9 @@
         {
             "Name":"Starscourge Radahn",
             "Location":"Redmane Castle",
-            "Weak_to":["scarlet rot","pierce"],
-            "Strong_to":["holy","sleep"],
-            "Items_dropped":["rememberence of the Starscourge","70'000 runes","Radahn's Great Rune"],
+            "Weak_to":"scarlet rot,pierce",
+            "Strong_to":"holy,sleep",
+            "Items_dropped":"rememberence of the Starscourge,70'000 runes,Radahn's Great Rune",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/radahn_enemies_elden_ring_wiki_600px1-min.jpg" 
         },
 
@@ -35,9 +35,9 @@
         {
             "Name":"Morgott, The Omen King",
             "Location":"Leyndell, Royal Capital",
-            "Weak_to":["slash"],
-            "Strong_to":["holy","sleep"],
-            "Items_dropped":["rememberence of the Omen King","120'000 runes","Morgott's Great Rune"],
+            "Weak_to":"slash",
+            "Strong_to":"holy,sleep",
+            "Items_dropped":"rememberence of the Omen King,120'000 runes,Morgott's Great Rune",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/morgott-omen-king-3-elden-ring-wiki-guide.jpg" 
         },
 
@@ -45,9 +45,9 @@
         {
             "Name":"Fire Giant",
             "Location":"Fire Giant",
-            "Weak_to":["slash"],
-            "Strong_to":["frostbite","fire"],
-            "Items_dropped":["rememberence of the Fire Giant","180'000 runes"] ,
+            "Weak_to":"slash",
+            "Strong_to":"frostbite,fire",
+            "Items_dropped":"rememberence of the Fire Giant,180'000 runes" ,
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/fire_giant_bosses_elden_ring_wiki_600px1-min.jpg" 
         },
 
@@ -55,9 +55,9 @@
         {
             "Name":"Maliketh, The Black Blade",
             "Location":"Crumbling Farum Azula",
-            "Weak_to":["standard","slash","strike","pierce"],
-            "Strong_to":["holy","sleep"],
-            "Items_dropped":["rememberence of the Black Blade","220'000 runes"],
+            "Weak_to":"standard,slash,strike,pierce",
+            "Strong_to":"holy,sleep",
+            "Items_dropped":"rememberence of the Black Blade,220'000 runes",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/maliketh-the-black-blade-4k1-min.jpg" 
         },
 
@@ -65,9 +65,9 @@
         {
             "Name":"Godfrey, First Elden Lord ",
             "Location":"Leyndell,Ashen Capital",
-            "Weak_to":["slash","lighting","pierce"],
-            "Strong_to":["holy","sleep"],
-            "Items_dropped":["rememberence of the Hoarah Loux","300'000 runes"],
+            "Weak_to":"slash,lighting,pierce",
+            "Strong_to":"holy,sleep",
+            "Items_dropped":"rememberence of the Hoarah Loux,300'000 runes",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/godfrey_first_elden_lord_bosses_elden_ring_wiki_600px1-min.jpg" 
         },
 
@@ -75,9 +75,9 @@
         {
             "Name":"Radagon of the Golden Order",
             "Location":"the heart of the Erdtree",
-            "Weak_to":["strike","fire"],
-            "Strong_to":["holy","hemorrhage"],
-            "Items_dropped":[],
+            "Weak_to":"strike,fire",
+            "Strong_to":"holy,hemorrhage",
+            "Items_dropped":"",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/radagon_of_the_golden_order_bosses_elden_ring_wiki_600px1-min.jpg" 
         },
 
@@ -85,9 +85,9 @@
         {
             "Name":"Elden Beast",
             "Location":"Elden Throne",
-            "Weak_to":["physical"],
-            "Strong_to":["holy","all status affects"],
-            "Items_dropped":["Elden rememberence","500'000 runes"],
+            "Weak_to":"physical",
+            "Strong_to":"holy,all status affects",
+            "Items_dropped":"Elden rememberence,500'000 runes",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/elden_beast_bosses_elden_ring_wiki_600px1-min.jpg" 
         }
 
@@ -99,7 +99,7 @@
         {
             "Name":"Axe of Godrick",
             "Skill":"I command thee kneel",
-            "Scalability":["strength","dexterity"],
+            "Scalability":"strength,dexterity",
             "Owner":"The grafted",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/axe_of_godrick_greataxe_weapon_elden_ring_wiki_guide_200px.png" 
         },
@@ -108,7 +108,7 @@
         {
             "Name":"Carian Regal Scepter",
             "Skill":"Spinning Weapon",
-            "Scalability":["intelligence"],
+            "Scalability":"intelligence",
             "Owner":"The Full Moon",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/carian_regal_scepter_glintstonestaff_weapon_elden_ring_wiki_guide_200px.png" 
         },
@@ -117,7 +117,7 @@
         {
             "Name":"Starscourge Greatsword",
             "Skill":"Starcaller Cry",
-            "Scalability":["intelligence","strength","dexterity"],
+            "Scalability":"intelligence,strength,dexterity",
             "Owner":"The goat",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/starscourge-greatsword-weapon-elden-ring-wiki-guide.png" 
         },
@@ -126,7 +126,7 @@
         {
             "Name":"Morgott's Cursed Sword",
             "Skill":"Cursed-Blood Slice",
-            "Scalability":["arcane","dexterity"],
+            "Scalability":"arcane,dexterity",
             "Owner":"The Omen King",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/morgotts_cursed_sword_curved_greatsword_weapon_elden_ring_wiki_guide_200px.png" 
         },
@@ -135,7 +135,7 @@
         {
             "Name":"Giant's Red Braid",
             "Skill":"Flame Dance",
-            "Scalability":["strength","dexterity","faith"],
+            "Scalability":"strength,dexterity,faith",
             "Owner":"The Fire Giant",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/giant's_red_braid_weapon_elden_ring_wiki_guide_200px.png" 
         },
@@ -144,7 +144,7 @@
         {
             "Name":"Maliketh's Black Blade",
             "Skill":"Destined Death",
-            "Scalability":["strength","dexterity","faith"],
+            "Scalability":"strength,dexterity,faith",
             "Owner":"The Black Blade",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/malikeths_black_blade_colossal_swords_elden_ring_wiki_guide_200px.png" 
         },
@@ -153,7 +153,7 @@
         {
             "Name":"Axe of Godfrey",
             "Skill":"Regal Roar",
-            "Scalability":["strength","dexterity"],
+            "Scalability":"strength,dexterity",
             "Owner":"The Black Blade",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/axe_of_godfrey_colossal_weapon_elden_ring_wiki_guide_200px.png" 
         },
@@ -162,7 +162,7 @@
         {
             "Name":"Marika's Hammer",
             "Skill":"Gold Breaker",
-            "Scalability":["strength","faith"],
+            "Scalability":"strength,faith",
             "Owner":"Radagon",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/marikas_hammer_elden_ring_wiki_guide_200px.png" 
         },
@@ -171,7 +171,7 @@
         {
             "Name":"Sacred Relic Sword",
             "Skill":"Wave of Gold",
-            "Scalability":["strength","faith","dexterity"],
+            "Scalability":"strength,faith,dexterity",
             "Owner":"Elden Beast",
             "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/sacred_relic_sword.png" 
         }
@@ -194,3 +194,4 @@
     }
         
 }
+

@@ -27,13 +27,21 @@ class Menu_Adapter(private val context:Context, private var menus: ArrayList<Men
         holder.itemView.findViewById<ImageView>(R.id.item_img).setImageResource(imageid)
         holder.itemView.findViewById<TextView>(R.id.item_text).text = menu.desc
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, Single_Menu::class.java)
+            if(menu.desc=="Bosses")
+            {
+                var intent= Intent(context, Boss_Activity::class.java)
+                context.startActivity(intent)
+            }
 
-            intent.putExtra("description", menu.desc) // Example extra data
-            context.startActivity(intent)
+            else if(menu.desc=="Boss Weapons")
+            {
+                var intent= Intent(context, Weapon_activity::class.java)
+                context.startActivity(intent)
+            }
+
+            else{}
         }
     }
-
     override fun getItemCount(): Int {
         return this.menus.size
     }

@@ -1,99 +1,88 @@
 package com.example.myapplication
 
+
 import android.content.Context
 import android.util.Log
+import com.android.volley.Request
 import com.android.volley.Request.Method
+import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.example.myapplication.Weapon_Manager.Companion.weapons
 import org.json.JSONObject
 
 class Boss_Manager {
+    companion object {
+        val bosses = ArrayList<Boss>()
 
-    companion object
-    {
-        var bosses= ArrayList<Boss>()
+        val url = "https://final-project-208a3-default-rtdb.europe-west1.firebasedatabase.app/"
+        fun getBosses(context: Context, boss_gotten: () -> Unit) {
+            bosses.clear()
 
-        private val endpoint="https://final-project-208a3-default-rtdb.europe-west1.firebasedatabase.app/"
+            //step 1
+            val requestQueue = Volley.newRequestQueue(context)
+            //step 2 - create the request
+            val jsonObjectRequest = JsonObjectRequest(
+                Request.Method.GET,
+                "${url}Bosses.json",
+                null,
+                Response.Listener { response ->
+                    val keys = response.keys()
+                    keys.forEach { key ->
+                        val jsonObject = response.getJSONObject(key)
+
+                        val items = jsonObject.getString("Items_dropped")
+                        val location = jsonObject.getString("Location")
+                        val name = jsonObject.getString("Name")
+                        val strengths = jsonObject.getString("Strong_to")
+                        val weakness = jsonObject.getString("Weak_to")
+                        val image = jsonObject.getString("image")
 
 
-        fun getBosses(context: Context,retrival:()->Unit)
-        {
-            val request=Volley.newRequestQueue(context)
-            val json_objects= JsonObjectRequest(
-                Method.GET,
-                "${endpoint}Bosses.json"
 
-                ,null,
-                {
-                        response->
 
-                    bosses.clear()
-                    val keys=response.keys()
-                    keys.forEach { key->
-                        val boss_obj=response.getJSONObject(key)
-                        val json_items=boss_obj.getJSONArray("Items_dropped")
-                        val location=boss_obj.getString("Location")
-                        val name=boss_obj.getString("name")
-                        val json_strengths=boss_obj.getJSONArray("Strong_to")
-                        val json_weakness=boss_obj.getJSONArray("Weak_to")
-                        val image=boss_obj.getString("IMAGE")
-                        val items= ArrayList<String>()
-                        val strengths= ArrayList<String>()
-                        val weakness= ArrayList<String>()
 
-                        for(i in 0 until json_items.length())
-                        {
-                            items.add(json_items[i].toString())
-                        }
 
-                        for(i in 0 until json_strengths.length())
-                        {
-                            strengths.add(json_strengths[i].toString())
-                        }
-
-                        for(i in 0 until json_weakness.length())
-                        {
-                            weakness.add(json_weakness[i].toString())
-                        }
-
-                        val boss= Boss(key,items,location,name,strengths,weakness,image)
+                        val boss = Boss(key, items, location, name, strengths, weakness, image)
                         bosses.add(boss)
+                        Log.v("bosses",boss.toString())
+
                     }
-
-                    retrival()
-
-
+                    boss_gotten()
                 },
-                {
-                        error->error.printStackTrace()
+                Response.ErrorListener { error ->
+                    error.printStackTrace()
                 }
-
             )
 
-            request.add(json_objects)
-
+            //step 3 add the request
+            requestQueue.add(jsonObjectRequest)
 
         }
 
-        fun addUser(context: Context,username:String,password:String,email: String, user_added:()->Unit)
+        fun addBoss(context: Context, items:String, location:String,name:String, strengths: String, weakness:String, image:String, boss_added:()->Unit)
         {
             val request= Volley.newRequestQueue(context)
-            val users_data= JSONObject().apply()
+            val weapon_data= JSONObject().apply()
             {
-                put("username",username)
-                put("password",password)
-                put("email",email)
+                put("Items_dropped",items)
+                put("Location",location)
+                put("Name",name)
+                put("Strong_to",strengths)
+                put("Weak_to",weakness)
+                put("image",image)
+
             }
 
             val jsoneObjectRequest= JsonObjectRequest(
                 Method.POST,
-                "${endpoint}Users.json"
-                ,users_data,
+                "${url}Boss Weapons.json"
+                ,weapon_data,
                 {
                         response->
-                    bosses.add(User(response.getString("name"),username,password,email))
-                    Log.d("response",response.toString())
-                    user_added()
+                    bosses.add(Boss(response.getString("name"),items,location,name,strengths,weakness,image))
+
+                    boss_added()
                 },
                 {
                         error->error.printStackTrace()
@@ -102,60 +91,8 @@ class Boss_Manager {
             request.add(jsoneObjectRequest)
         }
 
-        fun edit_user(context: Context,id:String, username: String, password: String, email:String, edited_user:()->Unit) {
 
-            val request= Volley.newRequestQueue(context)
-            val user_data=JSONObject().apply{
-                put("username", username)
-                put("password",password)
-                put("email",  email)
-            }
-            val jsonObjectRequest=JsonObjectRequest(
-                Method.PUT,
-                "${endpoint}Users.json",
-                user_data,
-                {
-                        response ->
-                    val new_user=User(id
-                        ,response.getString("username")
-                        ,response.getString("password")
-                        ,response.getString("email"))
-
-                    Log.d("response", response.toString())
-                    val old_user= bosses.indexOfFirst { it.id==id }
-                    bosses.set(old_user,new_user)
-                    edited_user()
-                },
-                {
-                        error -> error.printStackTrace()
-                }
-            )
-            request.add(jsonObjectRequest)
-        }
-
-        fun delete_user(context:Context,id:String,user_deleted:(user:User?)->Unit)
-        {
-            val request = Volley.newRequestQueue(context)
-
-            val jsonObjectRequest= JsonObjectRequest(
-                Method.DELETE,
-                "${endpoint}Users/"+id+".json",
-                null,
-                {
-                        response ->
-
-                    Log.d("response", response.toString())
-                    val user = bosses.find { it.id == id }
-
-
-
-                    user_deleted(user)
-                },
-                { error ->
-                    error.printStackTrace()
-                })
-
-            request.add(jsonObjectRequest)
-        }
     }
 }
+
+

@@ -32,13 +32,14 @@ class Log_in : AppCompatActivity() {
             if(User_Manager.users.isEmpty())
             {
                 User_Manager.getUsers(this) {
-                    User_Manager.users.forEach {
+                    User_Manager.users.forEach label@ {
                             user->
                         if(username.text.toString()==user.username &&password.text.toString()==user.password)
                         {
                             Toast.makeText(this,"Correct password and username",Toast.LENGTH_SHORT).show()
                             var intent=Intent(this,Home::class.java)
                             startActivity(intent)
+                            return@label
                         }
 
                         else if(username.text.toString()==user.username)
@@ -51,8 +52,13 @@ class Log_in : AppCompatActivity() {
                             Toast.makeText(this,"Incorrect username",Toast.LENGTH_SHORT).show()
                         }
 
+                        else
+                        {
+                            Toast.makeText(this,"Incorrect credentials",Toast.LENGTH_SHORT).show()
+                        }
+
                     }
-                    Toast.makeText(this,"Incorrect credentials",Toast.LENGTH_SHORT).show()
+
 
                 }
             }
@@ -66,6 +72,7 @@ class Log_in : AppCompatActivity() {
 
                         var intent=Intent(this,Home::class.java)
                         startActivity(intent)
+
                     }
 
                     else if(username.text.toString()==user.username)
@@ -78,8 +85,13 @@ class Log_in : AppCompatActivity() {
                         Toast.makeText(this,"Incorrect username",Toast.LENGTH_SHORT).show()
                     }
 
+                    else
+                    {
+                        Toast.makeText(this,"Incorrect credentials",Toast.LENGTH_SHORT).show()
+                    }
+
                 }
-                Toast.makeText(this,"Incorrect credentials",Toast.LENGTH_SHORT).show()
+
 
             }
         }

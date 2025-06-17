@@ -2,7 +2,6 @@ package com.example.myapplication
 
 import android.content.Context
 import android.util.Log
-import com.android.volley.Request
 import com.android.volley.Request.Method
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -13,7 +12,7 @@ class User_Manager {
 
     companion object
     {
-        private val endpoint="https://final-project-208a3-default-rtdb.europe-west1.firebasedatabase.app/"
+        private const val endpoint="https://final-project-208a3-default-rtdb.europe-west1.firebasedatabase.app/"
         var users= ArrayList<User>()
 
         fun getUsers(context: Context,retrival:()->Unit)
@@ -111,7 +110,7 @@ class User_Manager {
             request.add(jsonObjectRequest)
         }
 
-        fun delete_user(context:Context,id:String,user_deleted:(user:User?)->Unit)
+        fun delete_user(context:Context,id:String,user_deleted:(user: User?)->Unit)
         {
             val request = Volley.newRequestQueue(context)
 

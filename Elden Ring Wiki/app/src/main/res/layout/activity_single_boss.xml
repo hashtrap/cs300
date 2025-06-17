@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Single_Boss">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="dummy"
+        android:textSize="24sp"
+        android:id="@+id/boss_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boss_intro"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/boss_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boss_photo"
+        android:text="Items dropped"
+        android:textSize="24sp"
+        android:id="@+id/drops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:text="smmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/drops"
+        android:id="@+id/boss_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/boss_strength"
+        android:id="@+id/boss_desc_strength"
+        android:text="smth"
+        android:textSize="28sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boss_items"
+        android:layout_marginTop="30dp"
+        android:text="Strengths"
+        android:textSize="28sp"
+        android:id="@+id/boss_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/boss_desc_strength"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Weakness"
+        android:textSize="24sp"
+        android:id="@+id/boss_weakness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="Stavro"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/boss_weakness"
+        android:id="@+id/boss_weakness_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boss_weakness_desc"
+        android:text="Location"
+        android:textSize="24sp"
+        android:id="@+id/boss_temp_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/boss_temp_location"
+        android:text="safasdfasf"
+        android:textSize="24sp"
+        android:id="@+id/boss_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boss_location"
+        android:text="Add More Bosses"
+        android:id="@+id/btn_add_boss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
